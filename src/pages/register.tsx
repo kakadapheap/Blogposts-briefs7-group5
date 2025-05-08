@@ -1,58 +1,50 @@
-function Register() {
+import React from "react";
+
+const Register = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-4">Register</h1>
-      <form className="bg-white p-6 rounded shadow-md w-full max-w-sm">
-        <div className="mb-4">
-          <label
-            htmlFor="username"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Username
-          </label>
+    <div
+      className="min-h-screen bg-cover bg-center flex items-center justify-center"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')",
+      }}
+    >
+      <div className="bg-white bg-opacity-80 p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          Create an Account
+        </h2>
+        <form className="space-y-4">
           <input
             type="text"
-            id="username"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            required
+            placeholder="Full Name"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Email
-          </label>
           <input
             type="email"
-            id="email"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            required
+            placeholder="Email"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Password
-          </label>
           <input
             type="password"
-            id="password"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            required
+            placeholder="Password"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
-        >
-          Register
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+          >
+            Register
+          </button>
+        </form>
+        <p className="text-sm text-center mt-4">
+          Already have an account?{" "}
+          <a href="/login" className="text-blue-600 underline">
+            Login
+          </a>
+        </p>
+      </div>
     </div>
   );
-}
+};
+
 export default Register;
