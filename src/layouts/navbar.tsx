@@ -1,36 +1,3 @@
-// import type { FC } from "react";
-// import { Link } from "react-router-dom";
-
-// interface Navbar {
-//   title: string;
-// }
-
-// const Navbar: FC = () => {
-//   return (
-//     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
-//       <div className="text-xl font-bold text-blue-600">MyApp</div>
-//       <ul className="flex space-x-4">
-//         <li>
-//           <Link to="/" className="hover:text-blue-500">
-//             Home
-//           </Link>
-//         </li>
-//         <li>
-//           <Link to="/about" className="hover:text-blue-500">
-//             About
-//           </Link>
-//         </li>
-//         <li>
-//           <Link to="/contact" className="hover:text-blue-500">
-//             Contact
-//           </Link>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // or use any icon library you prefer
 
