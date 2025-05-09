@@ -65,8 +65,12 @@ const Navbar = () => {
               Contact
             </a>
           </li>
-          <li>
-            <a href="/login" className="hover:text-blue-500">
+
+          <li className="flex flex-col space-y-2">
+            <a
+              href="/login"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full transition duration-300 w-full text-center"
+            >
               Login
             </a>
           </li>
