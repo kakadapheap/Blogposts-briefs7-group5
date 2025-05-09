@@ -36,7 +36,6 @@
 import Navbar from "./layouts/navbar";
 import Footer from "./layouts/footer";
 import "./App.css";
-// import { Route } from "lucide-react";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
