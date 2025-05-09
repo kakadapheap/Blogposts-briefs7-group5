@@ -139,9 +139,7 @@ const Navbar = () => {
               Contact
             </a>
           </li>
-          {/* Mobile Auth Links responsive*/}
-          {/* Mobile Auth Links responsive */}
-          {/* Mobile Auth Links responsive */}
+
           <li className="flex flex-col space-y-2">
             <a
               href="/login"
