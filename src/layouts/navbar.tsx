@@ -8,7 +8,9 @@ const Navbar = () => {
     <nav className="bg-white shadow-md px-6 py-4">
       <div className="flex justify-between items-center">
         {/* Left - Logo */}
-        <div className="text-xl font-bold text-blue-600">BlogPost</div>
+        <a href="/" className="">
+          <div className="text-xl font-bold text-blue-600">BlogPost</div>{" "}
+        </a>
 
         {/* Center - Menu (desktop) */}
         <ul className="hidden md:flex space-x-6 font-semibold text-gray-800">
