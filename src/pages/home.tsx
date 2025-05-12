@@ -1,130 +1,146 @@
+// import Card from "../components/card";
+import backgroundVideo from "../assets/hero-section-vdo-bg.mp4";
+import img1 from "../assets/card1.png";
+import img2 from "../assets/card2.png";
+import img3 from "../assets/card3.png";
+import img4 from "../assets/card4.png";
+import img5 from "../assets/card5.png";
+import img6 from "../assets/card6.png";
+import img7 from "../assets/card7.png";
+import box1 from "../assets/box1.png";
+import box2 from "../assets/box2.png";
+import box3 from "../assets/box3.png";
+import box4 from "../assets/box4.png";
+import img8 from "../assets/card8.png";
+
+import Card from "../components/card";
+
 const Home: React.FC = () => {
-  // Example blog post data
-  const blogPosts = [
-    {
-      id: 1,
-      title: "How to Grow a Tree",
-      description:
-        "Learn the basics of planting and growing healthy trees in your backyard.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 2,
-      title: "Best Gardening Tools",
-      description:
-        "Here are the top tools every gardener should have in their shed.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 3,
-      title: "Spring Planting Guide",
-      description:
-        "Follow this guide to get your garden ready for spring with the right seeds.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 4,
-      title: "Soil Health Tips",
-      description:
-        "Discover simple ways to improve your soil for better plant growth.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 5,
-      title: "Soil Health Tips",
-      description:
-        "Discover simple ways to improve your soil for better plant growth.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 6,
-      title: "Soil Health Tips",
-      description:
-        "Discover simple ways to improve your soil for better plant growth.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 7,
-      title: "Soil Health Tips",
-      description:
-        "Discover simple ways to improve your soil for better plant growth.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 8,
-      title: "Soil Health Tips",
-      description:
-        "Discover simple ways to improve your soil for better plant growth.",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 9,
-      title: "Soil Health Tips",
-      description:
-        "Discover simple ways to improve your soil for better plant growth.",
-      image: "https://via.placeholder.com/150",
-    },
-  ];
-
-  // function Home() {
   return (
-    // <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-    //   <h1 className="text-4xl font-bold mb-4">Welcome to My Blog</h1>
-    //   <p className="text-lg text-gray-700 mb-8">
-    //     This is a simple blog application built with React and Tailwind CSS.
-    //   </p>
-    //   <a
-    //     href="/about"
-    //     className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-    //   >
-    //     Learn More
-    //   </a>
-    // </div>
-    <div className="max-w-6xl mx-auto p-4">
-      {/* Popular Categories */}
-      <div className="mb-10">
-        <h2 className="text-xl font-bold mb-4">Popular Categories</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-gray-300 h-24 rounded" />
-          <div className="bg-gray-300 h-24 rounded" />
-          <div className="bg-gray-300 h-24 rounded" />
-          <div className="bg-gray-300 h-24 rounded" />
+    <>
+      <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-4xl font-bold mb-4 text-white">
+            Where Words Come to Life <br />
+            {"Inspire. Learn. Share."}
+          </h1>
+          <p className="text-lg text-gray-100 mb-8">
+            Welcome to your source of stories, knowledge, and fresh ideas —
+            explore posts on tech, life, creativity, and more. <br /> Dive in,
+            find your spark, and share your voice with the world.{" "}
+          </p>
+          <a
+            href="/about"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-105 animate-fadeInUp delay-100"
+          >
+            Learn More
+          </a>
         </div>
       </div>
 
-      {/* Recent Blog Posts */}
-      <div>
-        <h2 className="text-xl font-bold mb-4">Recent Blog Posts</h2>
-        <div className="grid gap-6 md:grid-rows-2 lg:grid-cols-3 ">
-          {blogPosts.map((post) => (
-            <div
-              key={post.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
+      <div className="max-w-6xl mx-auto p-4">
+        <div className="mb-10">
+          <h2 className="text-xl font-bold mb-4">Popular Categories</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
               <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-40 object-cover"
+                src={box1}
+                alt="Category"
+                className="w-full h-full object-cover rounded"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
-                <p className="text-gray-600 text-sm">{post.description}</p>
-              </div>
             </div>
-          ))}
+            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
+              <img
+                src={box2}
+                alt="Category"
+                className="w-full h-full object-cover rounded"
+              />
+            </div>
+            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
+              <img
+                src={box3}
+                alt="Category"
+                className="w-full h-full object-cover rounded"
+              />
+            </div>
+            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
+              <img
+                src={box4}
+                alt="Category"
+                className="w-full h-full object-cover rounded"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Pagination */}
-        <div className="flex justify-center mt-8 gap-4">
-          <button className="w-8 h-8 bg-gray-300 rounded hover:bg-gray-400">
-            ‹
-          </button>
-          <button className="w-8 h-8 bg-gray-300 rounded hover:bg-gray-400">
-            ›
-          </button>
+        <div>
+          <h2 className="text-xl font-bold mb-4">Recent Blog Posts</h2>
+          <div className="grid gap-6 md:grid-rows-2 lg:grid-cols-3 ">
+            <Card
+              image={img1}
+              title="Chasing the Horizon"
+              description="Discover the freedom and focus that comes with cycling through nature's most beautiful landscapes."
+            />
+            <Card
+              image={img2}
+              title="From Pan to Plate"
+              description="Dive into the heart of a professional kitchen and learn how culinary magic is made."
+            />
+            <Card
+              image={img3}
+              title="The Art of Slowing Down"
+              description="A reminder from nature's slowest creature: sometimes, taking it slow is the key to happiness."
+            />
+            <Card
+              image={img4}
+              title="Voices for Science"
+              description="Explore the global movement advocating for truth, research, and the power of scientific voices."
+            />
+            <Card
+              image={img5}
+              title="Play Through the Pain"
+              description="A story of resilience and mental strength in the world of competitive sports."
+            />
+            <Card
+              image={img6}
+              title=" A Starry Perspective"
+              description="Step into Van Gogh’s visionary world and the emotional turbulence behind his masterpiece."
+            />
+            <Card
+              image={img7}
+              title="Coding the Future"
+              description="Explore how lines of code shape the apps, games, and systems we use every day."
+            />
+            <Card
+              image={img8}
+              title="Worlds of Wonder"
+              description=" Celebrate the creativity and joy of animated storytelling, from childhood favorites to modern classics."
+            />
+          </div>
+
+          <div className="flex justify-center mt-8 gap-4">
+            <button className="w-8 h-8 bg-gray-300 rounded hover:bg-gray-400">
+              ‹
+            </button>
+            <button className="w-8 h-8 bg-gray-300 rounded hover:bg-gray-400">
+              ›
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Home;
