@@ -1,7 +1,9 @@
 function Login() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-4">Login</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100"
+    
+    >
+      <h1 className="text-3xl font-bold mb-4 text-blue-600">Login</h1>
       <form className="bg-white p-6 rounded shadow-md w-96">
         <div className="mb-4">
           <label
@@ -13,7 +15,7 @@ function Login() {
           <input
             type="email"
             id="email"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block py-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required
           />
         </div>
@@ -27,13 +29,13 @@ function Login() {
           <input
             type="password"
             id="password"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block py-2 w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required
           />
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+          className="bg-blue-600 text-white` py-2 px-5 rounded hover:bg-blue-700"
         >
           Login
         </button>
