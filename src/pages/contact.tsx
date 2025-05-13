@@ -12,7 +12,7 @@ function Contact() {
           <form className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
             <div className="mb-3 w-full">
               <label
-                className="block font-medium mb-[2px] text-teal-700"
+                className="block font-medium mb-[2px] text-blue-600"
                 htmlFor="exampleInput90"
               >
                 Name
@@ -27,7 +27,7 @@ function Contact() {
 
             <div className="mb-3 w-full">
               <label
-                className="block font-medium mb-[2px] text-teal-700"
+                className="block font-medium mb-[2px] text-blue-600"
                 htmlFor="exampleInput90"
               >
                 Email
@@ -42,7 +42,7 @@ function Contact() {
 
             <div className="mb-3 w-full">
               <label
-                className="block font-medium mb-[2px] text-teal-700"
+                className="block font-medium mb-[2px] text-blue-600"
                 htmlFor="exampleInput90"
               >
                 Message
@@ -56,18 +56,18 @@ function Contact() {
 
             <button
               type="button"
-              className="mb-6 inline-block w-full rounded bg-teal-400 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-teal-500"
+              className="mb-6 inline-block w-full rounded bg-blue-600 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-teal-500"
             >
               Send
             </button>
           </form>
 
-          <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
+          <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12 py-12 lg:px-6">
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                 <div className="flex items-start">
                   <div className="shrink-0">
-                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-teal-700">
+                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-blue-600">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -86,7 +86,7 @@ function Contact() {
                   </div>
                   <div className="ml-6 grow">
                     <p className="mb-2 font-bold">Technical support</p>
-                    <p className="text-neutral-500 ">support@example.com</p>
+                    <p className="text-neutral-500 ">blogPost@gmail.com</p>
                     <p className="text-neutral-500 ">+1 234-567-89</p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ function Contact() {
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                 <div className="flex items-start">
                   <div className="shrink-0">
-                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-teal-700">
+                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-blue-600">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -113,7 +113,7 @@ function Contact() {
                   </div>
                   <div className="ml-6 grow">
                     <p className="mb-2 font-bold ">Sales questions</p>
-                    <p className="text-neutral-500 ">sales@example.com</p>
+                    <p className="text-neutral-500 ">blogPost@gmail.com</p>
                     <p className="text-neutral-500 ">+1 234-567-89</p>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ function Contact() {
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                 <div className="align-start flex">
                   <div className="shrink-0">
-                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-teal-700">
+                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-blue-600">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -140,7 +140,7 @@ function Contact() {
                   </div>
                   <div className="ml-6 grow">
                     <p className="mb-2 font-bold ">Press</p>
-                    <p className="text-neutral-500 ">press@example.com</p>
+                    <p className="text-neutral-500 ">blogPost@gmail.com</p>
                     <p className="text-neutral-500 ">+1 234-567-89</p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ function Contact() {
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:px-6">
                 <div className="align-start flex">
                   <div className="shrink-0">
-                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-teal-700">
+                    <div className="inline-block rounded-md bg-teal-400-100 p-4 text-blue-600">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -167,7 +167,7 @@ function Contact() {
                   </div>
                   <div className="ml-6 grow">
                     <p className="mb-2 font-bold">Bug report</p>
-                    <p className="text-neutral-500 ">bugs@example.com</p>
+                    <p className="text-neutral-500 ">blogPost@gmail.com</p>
                     <p className="text-neutral-500">+1 234-567-89</p>
                   </div>
                 </div>

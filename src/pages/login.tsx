@@ -1,44 +1,37 @@
-function Login() {
+
+
+const LoginPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-4">Login</h1>
-      <form className="bg-white p-6 rounded shadow-md w-96">
-        <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Email
-          </label>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="flex w-[900px] h-[500px] rounded-lg shadow-lg overflow-hidden">
+        {/* Left Side */}
+        <div className="w-1/2 bg-gradient-to-b from-blue-500 to-blue-900 text-white flex flex-col justify-center items-center p-10 relative">
+          <h1 className="text-3xl font-bold mb-4">GoFinance</h1>
+          <p className="text-sm mb-6">The most popular peer to peer lending at SEA</p>
+          <button className="bg-white text-blue-600 px-5 py-2 rounded-full text-sm font-semibold">Read More</button>
+          <div className="absolute bottom-4 left-4 w-40 h-40 border border-blue-300 rounded-full opacity-20"></div>
+        </div>
+
+        {/* Right Side */}
+        <div className="w-1/2 bg-white flex flex-col justify-center p-12">
+          <h2 className="text-xl font-semibold mb-1">Hello Again!</h2>
+          <p className="text-sm text-gray-500 mb-8">Welcome Back</p>
           <input
             type="email"
-            id="email"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            required
+            placeholder="Email Address"
+            className="mb-4 px-4 py-2 border border-gray-300 rounded-full w-full focus:outline-none"
           />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Password
-          </label>
           <input
             type="password"
-            id="password"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            required
+            placeholder="Password"
+            className="mb-4 px-4 py-2 border border-gray-300 rounded-full w-full focus:outline-none"
           />
+          <button className="bg-blue-600 text-white py-2 rounded-full font-semibold w-full hover:bg-blue-700 transition">Login</button>
+          <a href="#" className="text-sm text-blue-600 text-center mt-4 hover:underline">Forgot Password</a>
         </div>
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
-        >
-          Login
-        </button>
-      </form>
+      </div>
     </div>
   );
-}
-export default Login;
+};
+
+export default LoginPage;

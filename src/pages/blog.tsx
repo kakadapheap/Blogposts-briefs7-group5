@@ -6,7 +6,7 @@ function Blog() {
         This is the blog page where you can find all the latest posts.
       </p>
       <a
-        href="/blog/post"
+        href="blogdetail"
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
       >
         Read More

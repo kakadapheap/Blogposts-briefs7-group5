@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./layouts/navbar";
 import Footer from "./layouts/footer";
 import "./App.css";
@@ -11,26 +12,34 @@ import Profile from "./pages/profile";
 import Blog from "./pages/blog";
 import Blogdetail from "./pages/blogdetail";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+function AppContent() {
+  const location = useLocation();
+  const hideLayoutRoutes = ["/login", "/register"];
+  const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {!shouldHideLayout && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/sponsore" element={<Sponsore />} />
+        <Route path="/blogdetail" element={<Blogdetail />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+      {!shouldHideLayout && <Footer />}
+    </div>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/sponsore" element={<Sponsore />} />
-          <Route path="/blogdetail" element={<Blogdetail />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 }
