@@ -1,14 +1,33 @@
-
+import { useState } from "react";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+
+  const onChangeEmailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+  const onChangePass = (e) => {
+    setPass(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(email, pass);
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="flex w-[900px] h-[500px] rounded-lg shadow-lg overflow-hidden">
         {/* Left Side */}
         <div className="w-1/2 bg-gradient-to-b from-blue-500 to-blue-900 text-white flex flex-col justify-center items-center p-10 relative">
           <h1 className="text-3xl font-bold mb-4">GoFinance</h1>
-          <p className="text-sm mb-6">The most popular peer to peer lending at SEA</p>
-          <button className="bg-white text-blue-600 px-5 py-2 rounded-full text-sm font-semibold">Read More</button>
+          <p className="text-sm mb-6">
+            The most popular peer to peer lending at SEA
+          </p>
+          <button className="bg-white text-blue-600 px-5 py-2 rounded-full text-sm font-semibold">
+            Read More
+          </button>
           <div className="absolute bottom-4 left-4 w-40 h-40 border border-blue-300 rounded-full opacity-20"></div>
         </div>
 
@@ -16,18 +35,35 @@ const LoginPage = () => {
         <div className="w-1/2 bg-white flex flex-col justify-center p-12">
           <h2 className="text-xl font-semibold mb-1">Hello Again!</h2>
           <p className="text-sm text-gray-500 mb-8">Welcome Back</p>
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="mb-4 px-4 py-2 border border-gray-300 rounded-full w-full focus:outline-none"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="mb-4 px-4 py-2 border border-gray-300 rounded-full w-full focus:outline-none"
-          />
-          <button className="bg-blue-600 text-white py-2 rounded-full font-semibold w-full hover:bg-blue-700 transition">Login</button>
-          <a href="#" className="text-sm text-blue-600 text-center mt-4 hover:underline">Forgot Password</a>
+          <form onSubmit={handleSubmit}>
+            <input
+              onChange={onChangeEmailHandler}
+              value={email}
+              type="email"
+              placeholder="Email Address"
+              className="mb-4 px-4 py-2 border border-gray-300 rounded-full w-full focus:outline-none"
+            />
+            <input
+              onChange={onChangePass}
+              value={pass}
+              type="password"
+              placeholder="Password"
+              className="mb-4 px-4 py-2 border border-gray-300 rounded-full w-full focus:outline-none"
+            />
+
+            <button
+              type="submit"
+              className="bg-blue-600 text-white py-2 rounded-full font-semibold w-full hover:bg-blue-700 transition"
+            >
+              Login
+            </button>
+          </form>
+          <a
+            href="#"
+            className="text-sm text-blue-600 text-center mt-4 hover:underline"
+          >
+            Forgot Password
+          </a>
         </div>
       </div>
     </div>
