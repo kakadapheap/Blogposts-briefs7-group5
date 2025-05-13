@@ -37,7 +37,7 @@ export default function BlogPostDetail() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4 sm:p-6 bg-gray-200 rounded-2xl shadow-lg mt-20 my-20">
+    <div className="max-w-3xl mx-auto p-4 sm:p-6 bg-white rounded-2xl shadow-lg mt-20 my-20">
       <button
         onClick={() => navigate(-1)}
         className="mb-4 text-sm text-blue-500 hover:underline"
