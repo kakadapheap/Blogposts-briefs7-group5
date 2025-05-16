@@ -7,11 +7,11 @@ import img4 from "../assets/card4.png";
 import img5 from "../assets/card5.png";
 import img6 from "../assets/card6.png";
 import img7 from "../assets/card7.png";
+import img8 from "../assets/card8.png";
 import box1 from "../assets/box1.png";
 import box2 from "../assets/box2.png";
 import box3 from "../assets/box3.png";
 import box4 from "../assets/box4.png";
-import img8 from "../assets/card8.png";
 
 import Card from "../components/card";
 
@@ -31,19 +31,19 @@ const Home: React.FC = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl font-bold mb-4 text-white">
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-12 lg:px-24">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight">
             Where Words Come to Life <br />
-            {"Inspire. Learn. Share."}
+            <span className="block text-blue-300">Inspire. Learn. Share.</span>
           </h1>
-          <p className="text-lg text-gray-100 mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-6 md:mb-8 max-w-3xl mx-auto animate-fadeInUp opacity-0 animate-delay-200">
             Welcome to your source of stories, knowledge, and fresh ideas —
-            explore posts on tech, life, creativity, and more. <br /> Dive in,
-            find your spark, and share your voice with the world.{" "}
+            explore posts on tech, life, creativity, and more. <br />
+            Dive in, find your spark, and share your voice with the world.
           </p>
           <a
             href="/about"
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-105 animate-fadeInUp delay-100"
+            className="inline-block bg-blue-600 text-white text-sm sm:text-base px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-105 animate-fadeInUp delay-300"
           >
             Learn More
           </a>
@@ -130,14 +130,20 @@ const Home: React.FC = () => {
             />
           </div>
 
-          <div className="flex justify-center mt-8 gap-4">
-            <button className="w-8 h-8 bg-gray-300 rounded hover:bg-gray-400">
-              ‹
-            </button>
-            <button className="w-8 h-8 bg-gray-300 rounded hover:bg-gray-400">
-              ›
-            </button>
-          </div>
+          {/* <div className="flex justify-center mt-8 gap-4">
+            <a
+              href="/blog"
+              className="inline-block bg-blue-600 text-white text-sm sm:text-base px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-105 animate-fadeInUp delay-300"
+            >
+              View All Posts
+            </a>
+            <a
+              href="/about"
+              className="inline-block bg-gray-300 text-gray-800 text-sm sm:text-base px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-md hover:bg-gray-400 transition transform hover:scale-105 animate-fadeInUp delay-300"
+            >
+              About Us
+            </a>
+          </div> */}
         </div>
       </div>
     </>
