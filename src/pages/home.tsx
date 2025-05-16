@@ -1,4 +1,4 @@
-// import Card from "../components/card";
+import Card from "../components/card";
 import backgroundVideo from "../assets/hero-section-vdo-bg.mp4";
 import img1 from "../assets/card1.png";
 import img2 from "../assets/card2.png";
@@ -12,8 +12,6 @@ import box2 from "../assets/box2.png";
 import box3 from "../assets/box3.png";
 import box4 from "../assets/box4.png";
 import img8 from "../assets/card8.png";
-
-import Card from "../components/card";
 
 const Home: React.FC = () => {
   return (
