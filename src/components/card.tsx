@@ -16,7 +16,7 @@ function Card({ image, title, description }: CardProps) {
         <h3 className="text-2xl font-bold mb-3">{title}</h3>
         <p className="text-gray-700 text-base mb-4">{description}</p>
         <a
-          href="#"
+          href="./BlogDetail"
           className="inline-block bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition duration-300"
         >
           Read More

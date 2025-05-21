@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export default function BlogPostDetail() {
-  // Example blog data (replace with API data)
   const blog = {
     title: "How to Cook Like a Greek",
-    imageUrl: "https://source.unsplash.com/random/900x500?greek-food",
+    image: "../assets/blogdetail.jpg",
+    imageUrl: img1,
     content: `
       Greek cuisine is all about fresh ingredients and bold flavors.
       In this post, we’ll explore how to make classic Greek dishes such as moussaka,
@@ -37,7 +36,7 @@ export default function BlogPostDetail() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4 sm:p-6 mt-10 bg-gray-200 rounded-2xl shadow-lg">
+    <div className="max-w-3xl mx-auto p-6 mt-10 bg-white rounded-2xl shadow-lg">
       <button
         onClick={() => navigate(-1)}
         className="mb-4 text-sm text-blue-500 hover:underline"
@@ -47,7 +46,7 @@ export default function BlogPostDetail() {
       <img
         src={blog.imageUrl}
         alt={blog.title}
-        className="w-[500px] h-70 object-cover rounded-lg"
+        className="w-full min-h-fit object-cover rounded-lg"
       />
       <h1 className="text-3xl font-bold mt-6 text-gray-800">{blog.title}</h1>
       <p className="text-sm text-gray-500 mt-1">
