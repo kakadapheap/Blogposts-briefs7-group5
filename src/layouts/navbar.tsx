@@ -40,14 +40,6 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="/blog"
-              className="relative hover:text-blue-600 transition duration-300 after:block after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
-            >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
               href="/sponsore"
               className="relative hover:text-blue-600 transition duration-300 after:block after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
             >

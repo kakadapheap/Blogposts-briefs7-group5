@@ -9,7 +9,6 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Sponsore from "./pages/sponsore";
 import Profile from "./pages/profile";
-import Blog from "./pages/blog";
 import Blogdetail from "./pages/blogdetail";
 
 function AppContent() {
@@ -24,7 +23,6 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sponsore" element={<Sponsore />} />
         <Route path="/blogdetail" element={<Blogdetail />} />
