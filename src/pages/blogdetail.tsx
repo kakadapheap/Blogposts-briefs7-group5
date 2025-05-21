@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import img1 from "../assets/blogdetail.jpg";
+import { useState } from "react";
 
 export default function BlogPostDetail() {
   const blog = {
