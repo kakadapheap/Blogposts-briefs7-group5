@@ -1,4 +1,3 @@
-// import Card from "../components/card";
 import backgroundVideo from "../assets/hero-section-vdo-bg.mp4";
 import img1 from "../assets/card1.png";
 import img2 from "../assets/card2.png";
@@ -12,6 +11,7 @@ import box1 from "../assets/box1.png";
 import box2 from "../assets/box2.png";
 import box3 from "../assets/box3.png";
 import box4 from "../assets/box4.png";
+
 import Card from "../components/card";
 
 const Home: React.FC = () => {
@@ -128,21 +128,6 @@ const Home: React.FC = () => {
               description=" Celebrate the creativity and joy of animated storytelling, from childhood favorites to modern classics."
             />
           </div>
-
-          {/* <div className="flex justify-center mt-8 gap-4">
-            <a
-              href="/blog"
-              className="inline-block bg-blue-600 text-white text-sm sm:text-base px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-105 animate-fadeInUp delay-300"
-            >
-              View All Posts
-            </a>
-            <a
-              href="/about"
-              className="inline-block bg-gray-300 text-gray-800 text-sm sm:text-base px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-md hover:bg-gray-400 transition transform hover:scale-105 animate-fadeInUp delay-300"
-            >
-              About Us
-            </a>
-          </div> */}
         </div>
       </div>
     </>
