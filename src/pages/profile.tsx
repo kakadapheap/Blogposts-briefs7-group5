@@ -8,53 +8,80 @@ function Profile() {
   };
 
   return (
-    <div className="max-w-sm w-full mx-auto bg-white rounded-xl shadow-md sm:max-w-md md:max-w-lg lg:max-w-sm transition-all mt-[20px] mb-[20px]">
-      
-      <div
-        className="h-32 sm:h-40 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80')",
-        }}
-      ></div>
-
-      <div className="flex justify-center -mt-12 sm:-mt-16">
-        <img
-          className="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-full border-4 border-white"
-          src="https://randomuser.me/api/portraits/women/44.jpg"
-          alt="Profile"
-        />
-      </div>
-
-      <div className="text-center mt-2 sm:mt-4 px-4">
-        <h2 className="text-lg sm:text-xl font-semibold">Sarah Smith</h2>
-        <p className="text-gray-500 text-sm sm:text-base">
-          Freelance Web Designer
-        </p>
-      </div>
-
-      <div className="flex justify-around mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 px-4">
-        <div className="flex flex-col items-center">
-          <span>⭐</span>
-          <span>2k</span>
+    <div className="p-20 w-auto flex px-24 justify-center relative">
+      <div className="p-20 rounded-full sm:p-16 md:p-20 lg:p-24 xl:p-20 w-auto flex flex-col md:flex-row px-4 sm:px-8 md:px-24 lg:px-24 xl:px-24 relative">
+        <div className="mr-10">
+          <img
+            className="rounded-full min-w-[100px] w-full h-auto md:w-auto md:h-auto"
+            src="https://ucarecdn.com/833d0fe1-c3b5-4843-b62c-fed9467aceeb/imageOfMyself.jpeg"
+            alt="Aydin Vesali Moghaddam"
+          />
         </div>
-        <div className="flex flex-col items-center">
-          <span>👥</span>
-          <span>10k</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <span>🎁</span>
-          <span>15</span>
-        </div>
-      </div>
+        <div className="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]">
+          <h1 className="text-blue-800 font-bold text-3xl mt-6 mb-8">
+              Hello Everyone!
+          </h1>
+          <p className="text-black w-full sm:w-[35rem] md:w-[30rem] lg:w-[25rem] mb-10">
+            We are developer at ISI Tech Solutions. we sre full-stack developer.
+          </p>
+          <div className="flex flex-wrap justify-start items-center gap-4 mb-6">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href=""
+              className="bg-gray-800 rounded-lg p-5 w-64 flex items-center gap-2 text-white"
+            >
+              <img
+                className="mr-2 hover:scale-105 transition duration-300 ease-in-out"
+                src="https://ucarecdn.com/1f465c47-4849-4935-91f4-29135d8607af/github2.svg"
+                width="20px"
+                height="20px"
+                alt="Github"
+              />
+              <span>Visit Github</span>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href=""
+              className="bg-gray-800 rounded-lg p-5 w-64 flex items-center gap-2 text-white"
+            >
+              <img
+                className="mr-2 hover:scale-105 transition duration-300 ease-in-out"
+                src="https://ucarecdn.com/95eebb9c-85cf-4d12-942f-3c40d7044dc6/linkedin.svg"
+                width="20px"
+                height="20px"
+                alt="LinkedIn"
+              />
+              <span>Follow on LinkedIn</span>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href=""
+              className="bg-gray-800 rounded-lg p-5 w-64 flex items-center gap-2 text-white"
+            >
+              <img
+                className="mr-2 hover:scale-105 transition duration-300 ease-in-out"
+                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                width="20px"
+                height="20px"
+                alt="Twitter"
+              />
+              <span>Follow on Twitter</span>
+            </a>
+          </div>
 
-      <div className="text-center mt-4 mb-4 sm:mt-6 sm:mb-6">
-        <button
-          className="bg-blue-900 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full hover:bg-blue-800 transition-all"
-          onClick={handleFollow}
-        >
-          Follow
-        </button>
+          <div className="w-full flex justify-start sm:justify-center md:justify-start mt-4">
+            <button
+              onClick={handleFollow}
+              className="w-full sm:w-auto md:w-64 bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out text-white font-semibold py-3 px-6 rounded-lg shadow-md text-center"
+            >
+              Back to Home
+            </button>
+          </div>
+
+        </div>
       </div>
     </div>
   );
