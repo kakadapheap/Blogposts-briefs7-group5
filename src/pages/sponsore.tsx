@@ -13,13 +13,11 @@ import SramLogo from "../assets/sram.png";
 const SponsorPage = () => {
   return (
     <div className="bg-white text-gray-800">
-      {/* Page title */}
       <div className="text-center my-10">
         <h1 className="text-3xl font-bold">Event Sponsors</h1>
         <p className="text-sm text-gray-500">Home / Events / Sponsor</p>
       </div>
 
-      {/* Gold Sponsors */}
       <div className="text-center mb-10">
         <h2 className="text-xl font-semibold mb-4">Gold Sponsor</h2>
         <div className="flex flex-wrap justify-center gap-6">
@@ -29,7 +27,6 @@ const SponsorPage = () => {
         </div>
       </div>
 
-      {/* Bronze Sponsors */}
       <div className="text-center mb-10">
         <h2 className="text-xl font-semibold mb-4">Bronze Sponsor</h2>
         <div className="flex flex-wrap justify-center gap-6">
@@ -40,7 +37,6 @@ const SponsorPage = () => {
         </div>
       </div>
 
-      {/* Social Event Sponsors */}
       <div className="text-center mb-10">
         <h2 className="text-xl font-semibold mb-4">Social Events Sponsor</h2>
         <div className="flex flex-wrap justify-center gap-6">
