@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./layouts/navbar";
 import Footer from "./layouts/footer";
 import "./App.css";
@@ -26,6 +31,7 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/sponsore" element={<Sponsore />} />
         <Route path="/blogdetail" element={<Blogdetail />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
