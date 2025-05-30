@@ -9,7 +9,8 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Sponsore from "./pages/sponsore";
 import Profile from "./pages/profile";
-import Blogdetail from "./pages/blogdetail";
+import CategoryBlog from "./pages/CategoryBlog";
+import BlogPostDetail from "./pages/blogdetail";
 
 function AppContent() {
   const location = useLocation();
@@ -25,9 +26,11 @@ function AppContent() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sponsore" element={<Sponsore />} />
-        <Route path="/blogdetail" element={<Blogdetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+       <Route path="/category-blog" element={<CategoryBlog />} />
+        <Route path="/category-blog/:category" element={<CategoryBlog />} />
+        <Route path="/blogs/:id" element={<BlogPostDetail />} />
       </Routes>
       {!shouldHideLayout && <Footer />}
     </div>
