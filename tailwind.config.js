@@ -24,21 +24,12 @@
 //   },
 // };
 // export const plugins = [];
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      keyframes: {
-        fadeInUp: {
-          "20%": { opacity: "0", transform: "translateY(10px)" },
-          "80%": { opacity: "1", transform: "translateY(0)" },
-        },
-      },
-      animation: {
-        fadeInUp: "fadeInUp 0.5s ease-out",
-      },
-    },
+    extend: {},
   },
-  plugins: [],
-};
+  plugins: [require('@tailwindcss/typography')],
+}
+

@@ -1,12 +1,11 @@
+
+
+import { Link } from "react-router-dom"; // Add this at the top
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import backgroundVideo from "../assets/hero-section-vdo-bg.mp4";
-import img1 from "../assets/card1.png";
-import img2 from "../assets/card2.png";
-import img3 from "../assets/card3.png";
-import img4 from "../assets/card4.png";
-import img5 from "../assets/card5.png";
-import img6 from "../assets/card6.png";
-import img7 from "../assets/card7.png";
-import img8 from "../assets/card8.png";
 import box1 from "../assets/box1.png";
 import box2 from "../assets/box2.png";
 import box3 from "../assets/box3.png";
@@ -14,9 +13,37 @@ import box4 from "../assets/box4.png";
 
 import Card from "../components/card";
 
+interface Blog {
+  documentId: any;
+  id: number;
+  title: string;
+  content: string;
+  image: {
+    url: string;
+    formats?: {
+      medium?: { url: string };
+      small?: { url: string };
+    };
+  }[];
+}
+
 const Home: React.FC = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:1338/api/blogs?populate=*`)
+      .then((res) => {
+        setBlogs(res.data.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching blogs:", err);
+      });
+  }, []);
+    console.log(blogs)
   return (
     <>
+      {/* Hero Section */}
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
         <video
           autoPlay
@@ -49,88 +76,46 @@ const Home: React.FC = () => {
         </div>
       </div>
 
+      {/* Categories Section */}
       <div className="max-w-6xl mx-auto p-4">
         <div className="mb-10">
           <h2 className="text-xl font-bold mb-4">Popular Categories</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
-              <img
-                src={box1}
-                alt="Category"
-                className="w-full h-full object-cover rounded"
-              />
-            </div>
-            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
-              <img
-                src={box2}
-                alt="Category"
-                className="w-full h-full object-cover rounded"
-              />
-            </div>
-            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
-              <img
-                src={box3}
-                alt="Category"
-                className="w-full h-full object-cover rounded"
-              />
-            </div>
-            <div className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp">
-              <img
-                src={box4}
-                alt="Category"
-                className="w-full h-full object-cover rounded"
-              />
-            </div>
+            {[box1, box2, box3, box4].map((img, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-300 h-24 rounded transform transition duration-500 ease-in-out hover:scale-105 animate-fadeInUp"
+              >
+                <img
+                  src={img}
+                  alt="Category"
+                  className="w-full h-full object-cover rounded"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
+        {/* Dynamic Blog Section */}
         <div>
-          <h2 className="text-xl font-bold mb-4">Recent Blog Posts</h2>
-          <div className="grid gap-6 md:grid-rows-2 lg:grid-cols-3 ">
-            <Card
-              image={img1}
-              title="Chasing the Horizon"
-              description="Discover the freedom and focus that comes with cycling through nature's most beautiful landscapes."
-            />
-            <Card
-              image={img2}
-              title="From Pan to Plate"
-              description="Dive into the heart of a professional kitchen and learn how culinary magic is made."
-            />
-            <Card
-              image={img3}
-              title="The Art of Slowing Down"
-              description="A reminder from nature's slowest creature: sometimes, taking it slow is the key to happiness."
-            />
-            <Card
-              image={img4}
-              title="Voices for Science"
-              description="Explore the global movement advocating for truth, research, and the power of scientific voices."
-            />
-            <Card
-              image={img5}
-              title="Play Through the Pain"
-              description="A story of resilience and mental strength in the world of competitive sports."
-            />
-            <Card
-              image={img6}
-              title=" A Starry Perspective"
-              description="Step into Van Gogh’s visionary world and the emotional turbulence behind his masterpiece."
-            />
-            <Card
-              image={img7}
-              title="Coding the Future"
-              description="Explore how lines of code shape the apps, games, and systems we use every day."
-            />
-            <Card
-              image={img8}
-              title="Worlds of Wonder"
-              description=" Celebrate the creativity and joy of animated storytelling, from childhood favorites to modern classics."
-            />
+         <h2 className="text-xl font-bold mb-4">Recent Blog Posts</h2>
+          <div className="grid gap-6 md:grid-rows-2 lg:grid-cols-3">
+            {blogs.map((blog) => (
+              <Link to={`/blogs/${blog.documentId}`} key={blog.id}>
+                <Card
+                  image={
+                   blog.image[0].url
+                  }
+                  title={blog.title}
+                  description={blog.content.substring(0, 150) + "..."}
+                />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
     </>
   );
 };
+
 export default Home;
