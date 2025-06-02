@@ -1,13 +1,13 @@
 import { useState } from "react";
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Step 1
+import { useNavigate } from "react-router-dom"; 
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const navigate = useNavigate(); // Step 2
+  const navigate = useNavigate(); 
 
   const onChangeEmailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -23,7 +23,7 @@ const LoginPage = () => {
     if (email && password) {
       console.log("Logging in:", email);
       setLoggedIn(true);
-      navigate("/home"); // Step 3: Redirect after login
+      navigate("/home"); 
     }
   };
 
@@ -31,13 +31,13 @@ const LoginPage = () => {
     setEmail("");
     setPassword("");
     setLoggedIn(false);
-    navigate("/"); // Optional: return to login on logout
+    navigate("/"); 
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="flex w-[900px] h-[500px] rounded-lg shadow-lg overflow-hidden">
-        {/* Left Side */}
+      
         <div className="w-1/2 bg-gradient-to-b from-blue-500 to-blue-900 text-white flex flex-col justify-center items-center p-10 relative">
           <h1 className="text-3xl font-bold mb-4">GoFinance</h1>
           <p className="text-sm mb-6">The most popular peer to peer lending at SEA</p>
@@ -45,7 +45,7 @@ const LoginPage = () => {
           <div className="absolute bottom-4 left-4 w-40 h-40 border border-blue-300 rounded-full opacity-20"></div>
         </div>
 
-        {/* Right Side */}
+       
         <div className="w-1/2 bg-white flex flex-col justify-center p-12">
           {loggedIn ? (
             <>
