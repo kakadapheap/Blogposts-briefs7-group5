@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# 📘 BlogPost Module – Pless Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This module is part of the **Pless** platform, designed to manage blog posts efficiently for internal and client-facing publishing. Built with flexibility and performance in mind, the BlogPost system supports secure creation, editing, and publishing of content with role-based access control.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📝 **Post Management**
+  - Create, edit, delete, and publish blog posts
+  - Markdown or rich-text content support
+  - Draft and published states
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔐 **Authentication & Authorization**
+  - Role-based access (Admin, Editor, Viewer)
+  - Secure login and session management
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 🧑‍🤝‍🧑 **User Permissions**
+  - Only Editors/Admins can modify content
+  - Viewers can only read published posts
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 🗂️ **Categorization & Tagging**
+  - Organize posts by category
+  - Add searchable tags to posts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 📅 **Publication Scheduling**
+  - Schedule posts for future publication
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- 📊 **Admin Dashboard**
+  - View stats: total posts, drafts, views, etc.
+  - Quick access to recently edited content
+
+---
+
+## 🏗️ Tech Stack
+
+- **Frontend:** React.js / TailwindCSS  
+- **Backend:** Node.js / Express / MongoDB  
+- **Auth:** JWT & Bcrypt  
+- **API:** RESTful endpoints
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-org/pless-blogpost.git
+cd pless-blogpost
