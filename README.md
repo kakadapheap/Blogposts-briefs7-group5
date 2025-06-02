@@ -25,18 +25,12 @@ This module is part of the **Pless** platform, designed to manage blog posts eff
 
 - 📅 **Publication Scheduling**
   - Schedule posts for future publication
-
-- 📊 **Admin Dashboard**
-  - View stats: total posts, drafts, views, etc.
-  - Quick access to recently edited content
-
 ---
 
 ## 🏗️ Tech Stack
 
 - **Frontend:** React.js / TailwindCSS  
 - **Backend:** Node.js / Express / MongoDB  
-- **Auth:** JWT & Bcrypt  
 - **API:** RESTful endpoints
 
 ---
