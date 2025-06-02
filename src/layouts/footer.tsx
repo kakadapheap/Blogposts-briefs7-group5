@@ -9,7 +9,7 @@ const Footer: FC<FooterProps> = () => {
     <footer className="bg-black text-white pt-16 pb-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 text-center lg:text-left">
-          {/* Company Info (optional space to add logo or description) */}
+          
           <div className="space-y-4 w-full lg:w-auto">
             <h2 className="text-2xl font-bold">BlogPost</h2>
             <p className="text-gray-400">
@@ -17,7 +17,7 @@ const Footer: FC<FooterProps> = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+        
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
@@ -36,7 +36,7 @@ const Footer: FC<FooterProps> = () => {
             </ul>
           </div>
 
-          {/* Services */}
+         
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
@@ -59,7 +59,7 @@ const Footer: FC<FooterProps> = () => {
             </ul>
           </div>
 
-          {/* Contact Us */}
+          
           <div className="space-y-4 w-full lg:w-auto">
             <h3 className="text-lg font-semibold">Contact Us</h3>
             <address className="not-italic text-gray-400 space-y-2">
@@ -149,7 +149,7 @@ const Footer: FC<FooterProps> = () => {
               </div>
             </address>
 
-            {/* Social Icons */}
+            
             <div className="flex justify-center lg:justify-start gap-4 mt-4 text-gray-400">
               {["Facebook", "Twitter", "Instagram", "LinkedIn"].map(
                 (platform) => (
@@ -160,7 +160,7 @@ const Footer: FC<FooterProps> = () => {
                     aria-label={platform}
                   >
                     <span className="sr-only">{platform}</span>
-                    {/* You can replace these with Lucide icons or SVGs if needed */}
+                    
                     <i className={`fab fa-${platform.toLowerCase()}`}></i>
                   </a>
                 )

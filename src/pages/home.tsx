@@ -1,6 +1,6 @@
 
 
-import { Link } from "react-router-dom"; // Add this at the top
+import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
     console.log(blogs)
   return (
     <>
-      {/* Hero Section */}
+      
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
         <video
           autoPlay
@@ -68,15 +68,15 @@ const Home: React.FC = () => {
             Dive in, find your spark, and share your voice with the world.
           </p>
           <a
-            href="/about"
+            href="/category-blog/:category"
             className="inline-block bg-blue-600 text-white text-sm sm:text-base px-6 py-2 sm:px-8 sm:py-3 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-105 animate-fadeInUp delay-300"
           >
-            Learn More
+            Category
           </a>
         </div>
       </div>
 
-      {/* Categories Section */}
+     
       <div className="max-w-6xl mx-auto p-4">
         <div className="mb-10">
           <h2 className="text-xl font-bold mb-4">Popular Categories</h2>
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Dynamic Blog Section */}
+       
         <div>
          <h2 className="text-xl font-bold mb-4">Recent Blog Posts</h2>
           <div className="grid gap-6 md:grid-rows-2 lg:grid-cols-3">

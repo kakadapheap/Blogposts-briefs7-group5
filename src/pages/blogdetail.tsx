@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function BlogPostDetail() {
   const { id } = useParams();
-  const navigate = useNavigate(); // hook to navigate programmatically
+  const navigate = useNavigate(); 
 
   const [blog, setBlog] = useState<any>(null);
 

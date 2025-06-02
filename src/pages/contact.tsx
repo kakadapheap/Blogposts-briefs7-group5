@@ -13,11 +13,11 @@ function Contact() {
         </p>
 
         <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
-          {/* Contact Info */}
+        
           <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/3">
             <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
             <div className="space-y-8">
-              {/* <!-- Email --> */}
+           
               <div className="flex items-center gap-4 group">
                 <div className="bg-blue-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
                   <svg
@@ -40,7 +40,7 @@ function Contact() {
                   <p>example@gmail.com</p>
                 </div>
               </div>
-              {/* <!-- Phone --> */}
+             
               <div className="flex items-center gap-4 group">
                 <div className="bg-green-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
                   <svg
@@ -63,7 +63,7 @@ function Contact() {
                   <p>0123456789</p>
                 </div>
               </div>
-              {/* <!-- Location --> */}
+             
               <div className="flex items-center gap-4 group">
                 <div className="bg-red-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
                   <svg
@@ -92,7 +92,7 @@ function Contact() {
                   <p>Your Location</p>
                 </div>
               </div>
-              {/* <!-- Calendly --> */}
+             
               <div className="flex items-center gap-4 group">
                 <div className="bg-purple-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
                   <svg
@@ -120,7 +120,7 @@ function Contact() {
             </div>
           </div>
 
-          {/* Form */}
+       
           <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/3 flex items-center justify-center">
             <form
               action="https://formbold.com/s/FORM_ID"

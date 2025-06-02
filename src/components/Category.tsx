@@ -1,4 +1,4 @@
-// src/components/Category.tsx
+
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
